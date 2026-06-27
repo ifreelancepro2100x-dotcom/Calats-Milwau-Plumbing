@@ -1,0 +1,1424 @@
+<!-- ===================== -->
+<!-- PERFORMANCE & FONTS -->
+<!-- ===================== -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ========== MAIN WRAPPER ========== */
+.pvp-page {
+font-family: 'Open Sans', Arial, sans-serif;
+font-size: 16px;
+line-height: 1.6;
+color: #2C2C2C;
+background: #FAFAFA;
+-webkit-font-smoothing: antialiased;
+margin: 0;
+padding: 0;
+}
+.pvp-page *,
+.pvp-page *::before,
+.pvp-page *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+.pvp-page img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+.pvp-page a {
+text-decoration: none;
+color: inherit;
+transition: color 0.3s ease;
+}
+.pvp-page ul,
+.pvp-page li {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.pvp-page h1,
+.pvp-page h2,
+.pvp-page h3,
+.pvp-page h4 {
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+color: #2C2C2C;
+line-height: 1.3;
+margin: 0;
+padding: 0;
+}
+.pvp-page h1 { font-size: clamp(1.5rem, 5vw, 2.5rem); }
+.pvp-page h2 { font-size: clamp(1.3rem, 4vw, 2rem); color: #0099CC; }
+.pvp-page h3 { font-size: clamp(1.1rem, 3vw, 1.4rem); }
+.pvp-page h4 { font-size: clamp(1rem, 2.5vw, 1.15rem); }
+.pvp-page p {
+margin: 0 0 12px 0;
+padding: 0;
+color: #2C2C2C;
+}
+.pvp-page address {
+font-style: normal;
+}
+.pvp-page .container {
+width: 100%;
+max-width: 1400px;
+padding: 0 15px;
+margin: 0 auto;
+}
+.pvp-page .section-padding {
+padding: 40px 0;
+}
+/* ========== ICONS FIX ========== */
+.pvp-page i,
+.pvp-page .fas,
+.pvp-page .fab,
+.pvp-page .fa {
+font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', FontAwesome !important;
+font-style: normal;
+display: inline-block;
+}
+.pvp-page .fas { font-weight: 900; }
+.pvp-page .fab { font-weight: 400; }
+/* ========== BUTTONS ========== */
+.pvp-page .btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+background: #0099CC;
+color: #FFFFFF;
+padding: 12px 24px;
+border-radius: 8px;
+font-weight: 700;
+font-family: 'Montserrat', sans-serif;
+font-size: 0.95rem;
+text-transform: uppercase;
+border: none;
+cursor: pointer;
+transition: all 0.3s ease;
+text-align: center;
+white-space: nowrap;
+text-decoration: none;
+}
+.pvp-page .btn:hover {
+background: #0077AA;
+transform: translateY(-2px);
+box-shadow: 0 4px 15px rgba(0, 153, 204, 0.4);
+color: #FFFFFF;
+}
+.pvp-page .btn i { font-size: 1rem; }
+/* ========== TOP BAR ========== */
+.pvp-page .top-bar {
+display: none;
+background: #2C2C2C;
+color: #CCCCCC;
+font-size: 0.85rem;
+padding: 10px 0;
+border-bottom: 3px solid #0099CC;
+}
+.pvp-page .top-bar .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 10px;
+}
+.pvp-page .top-info {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+.pvp-page .top-info span {
+display: inline-flex;
+align-items: center;
+color: #CCCCCC;
+}
+.pvp-page .top-info i {
+color: #0099CC;
+margin-right: 8px;
+font-size: 0.9rem;
+}
+.pvp-page .top-info a { color: #CCCCCC; }
+.pvp-page .top-info a:hover { color: #0099CC; }
+.pvp-page .social-icons {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.pvp-page .social-icons > span {
+margin-right: 8px;
+font-weight: 600;
+color: #CCCCCC;
+}
+.pvp-page .social-icons a {
+width: 32px;
+height: 32px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #CCCCCC;
+border-radius: 50%;
+transition: all 0.3s ease;
+font-size: 0.9rem;
+}
+.pvp-page .social-icons a:hover {
+background: #0099CC;
+color: #FFFFFF;
+}
+/* ========== NAVIGATION ========== */
+.pvp-page .main-nav {
+background: #FFFFFF;
+box-shadow: 0 2px 10px rgba(44,44,44,0.1);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+.pvp-page .nav-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 12px 15px;
+max-width: 1400px;
+margin: 0 auto;
+}
+.pvp-page .logo img {
+max-height: 50px;
+width: auto;
+}
+.pvp-page .nav-cta-mobile {
+display: flex;
+gap: 8px;
+align-items: center;
+}
+.pvp-page .nav-cta-mobile .btn {
+padding: 10px 16px;
+font-size: 0.85rem;
+}
+.pvp-page .nav-cta-mobile .btn i {
+font-size: 1rem;
+margin: 0;
+}
+.pvp-page .nav-menu {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background: #FFFFFF;
+flex-direction: column;
+padding: 70px 20px 20px;
+overflow-y: auto;
+z-index: 999;
+margin: 0;
+}
+.pvp-page .nav-menu.active { display: flex; }
+.pvp-page .nav-item {
+width: 100%;
+border-bottom: 1px solid #DDDDDD;
+}
+.pvp-page .nav-item > a {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 0;
+font-weight: 600;
+color: #2C2C2C;
+font-size: 1rem;
+}
+.pvp-page .nav-item > a.active { color: #0099CC; }
+.pvp-page .nav-item > a i {
+font-size: 0.8rem;
+transition: transform 0.3s;
+color: #2C2C2C;
+}
+.pvp-page .nav-item.active-dropdown > a i { transform: rotate(180deg); }
+.pvp-page .dropdown {
+display: none;
+padding-left: 15px;
+padding-bottom: 10px;
+}
+.pvp-page .nav-item.active-dropdown .dropdown { display: block; }
+.pvp-page .dropdown li { width: 100%; }
+.pvp-page .dropdown li a {
+display: block;
+padding: 10px 0;
+font-size: 0.9rem;
+color: #2C2C2C;
+border-bottom: 1px dashed #DDDDDD;
+}
+.pvp-page .dropdown li:last-child a { border-bottom: none; }
+.pvp-page .dropdown li a:hover { color: #0099CC; }
+.pvp-page .nav-cta-section {
+margin-top: auto;
+padding-top: 20px;
+border-top: 2px solid #0099CC;
+}
+.pvp-page .nav-cta-section .btn {
+width: 100%;
+padding: 14px;
+font-size: 1rem;
+}
+.pvp-page .mobile-toggle {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 44px;
+height: 44px;
+cursor: pointer;
+color: #2C2C2C;
+background: none;
+border: none;
+z-index: 1001;
+position: relative;
+}
+.pvp-page .mobile-toggle i {
+font-size: 1.5rem;
+color: #2C2C2C;
+}
+.pvp-page .nav-cta-desktop { display: none; }
+/* ========== HERO ========== */
+.pvp-page .hero-section {
+padding: 30px 0 40px;
+background: linear-gradient(135deg, #2C2C2C 0%, #1a1a1a 100%);
+color: #FFFFFF;
+position: relative;
+}
+.pvp-page .hero-section::before {
+content: '';
+position: absolute;
+top: 0; left: 0; right: 0; bottom: 0;
+background: url('https://emergencyplumbermilwaukeewi.com/wp-content/uploads/2026/02/Calat-Milwau-Plumbing-Logo-e1772147327638.png') center/cover no-repeat;
+opacity: 0.1;
+pointer-events: none;
+}
+.pvp-page .hero-section .container {
+position: relative;
+z-index: 2;
+}
+.pvp-page .hero-grid {
+display: flex;
+flex-direction: column;
+gap: 30px;
+}
+.pvp-page .hero-content .breadcrumb {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin-bottom: 15px;
+font-size: 0.85rem;
+}
+.pvp-page .hero-content .breadcrumb a { color: rgba(255,255,255,0.8); }
+.pvp-page .hero-content .breadcrumb a:hover { color: #0099CC; }
+.pvp-page .hero-content .breadcrumb span { color: rgba(255,255,255,0.8); }
+.pvp-page .hero-content .breadcrumb .current { color: #0099CC; }
+.pvp-page .hero-content h1 { color: #FFFFFF; margin-bottom: 10px; }
+.pvp-page .hero-subtitle {
+font-size: 1rem;
+color: #0099CC;
+margin-bottom: 15px;
+font-weight: 600;
+}
+.pvp-page .hero-content > p {
+color: rgba(255,255,255,0.85);
+font-size: 0.95rem;
+line-height: 1.7;
+}
+.pvp-page .hero-badges {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-top: 18px;
+}
+.pvp-page .hero-badge {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+background: rgba(0,153,204,0.15);
+border: 1px solid rgba(0,153,204,0.3);
+color: #FFFFFF;
+padding: 6px 14px;
+border-radius: 20px;
+font-size: 0.8rem;
+font-weight: 600;
+}
+.pvp-page .hero-badge i {
+color: #0099CC;
+font-size: 0.8rem;
+}
+.pvp-page .hero-form {
+background: #FFFFFF;
+border-radius: 8px;
+padding: 20px 15px;
+box-shadow: 0 8px 30px rgba(44,44,44,0.15);
+border-top: 4px solid #0099CC;
+}
+.pvp-page .hero-form h3 {
+text-align: center;
+margin-bottom: 15px;
+color: #2C2C2C;
+font-size: 1.1rem;
+}
+.pvp-page .hero-form iframe {
+width: 100%;
+min-height: 400px;
+border: none;
+display: block;
+}
+/* ========== INTRO SECTION ========== */
+.pvp-page .intro-section { background: #FFFFFF; }
+.pvp-page .intro-wrapper {
+max-width: 900px;
+margin: 0 auto;
+}
+.pvp-page .intro-wrapper h2 {
+margin-bottom: 15px;
+padding-bottom: 10px;
+border-bottom: 3px solid #0099CC;
+}
+.pvp-page .intro-wrapper p {
+font-size: 0.95rem;
+line-height: 1.8;
+margin-bottom: 14px;
+}
+.pvp-page .intro-wrapper a.inline-link {
+color: #0099CC;
+text-decoration: underline;
+font-weight: 600;
+transition: color 0.3s ease;
+}
+.pvp-page .intro-wrapper a.inline-link:hover { color: #0077AA; }
+/* ========== SERVICES GRID ========== */
+.pvp-page .services-section { background: #FAFAFA; }
+.pvp-page .services-section .section-header {
+text-align: center;
+max-width: 700px;
+margin: 0 auto 30px;
+}
+.pvp-page .services-section .section-header p {
+font-size: 0.95rem;
+color: #2C2C2C;
+margin-top: 8px;
+}
+.pvp-page .services-grid {
+display: grid;
+grid-template-columns: 1fr;
+gap: 15px;
+max-width: 1000px;
+margin: 0 auto;
+}
+.pvp-page .service-card {
+background: #FFFFFF;
+border-radius: 8px;
+padding: 20px;
+box-shadow: 0 2px 10px rgba(44,44,44,0.08);
+border-left: 4px solid #0099CC;
+transition: all 0.3s ease;
+display: flex;
+align-items: flex-start;
+gap: 15px;
+text-decoration: none;
+color: inherit;
+}
+.pvp-page .service-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 6px 20px rgba(0,153,204,0.15);
+border-left-color: #0077AA;
+}
+.pvp-page .service-card .service-icon {
+width: 48px;
+height: 48px;
+min-width: 48px;
+background: linear-gradient(135deg, #0099CC 0%, #0077AA 100%);
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #FFFFFF;
+font-size: 1.2rem;
+}
+.pvp-page .service-card .service-info h4 {
+margin-bottom: 5px;
+color: #2C2C2C;
+font-size: 0.95rem;
+}
+.pvp-page .service-card .service-info p {
+font-size: 0.85rem;
+color: #666666;
+margin: 0;
+line-height: 1.5;
+}
+/* ========== WHY CHOOSE US ========== */
+.pvp-page .why-section { background: #FFFFFF; }
+.pvp-page .why-section .section-header {
+text-align: center;
+max-width: 700px;
+margin: 0 auto 30px;
+}
+.pvp-page .why-section .section-header p {
+font-size: 0.95rem;
+color: #2C2C2C;
+margin-top: 8px;
+}
+.pvp-page .why-grid {
+display: grid;
+grid-template-columns: 1fr;
+gap: 20px;
+max-width: 1000px;
+margin: 0 auto;
+}
+.pvp-page .why-card {
+background: #F5F7FA;
+border-radius: 8px;
+padding: 25px;
+text-align: center;
+transition: all 0.3s ease;
+}
+.pvp-page .why-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 6px 20px rgba(44,44,44,0.1);
+}
+.pvp-page .why-card .why-icon {
+width: 60px;
+height: 60px;
+background: linear-gradient(135deg, #0099CC 0%, #0077AA 100%);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 15px;
+color: #FFFFFF;
+font-size: 1.3rem;
+}
+.pvp-page .why-card h4 { margin-bottom: 8px; }
+.pvp-page .why-card p {
+font-size: 0.9rem;
+color: #666666;
+margin: 0;
+line-height: 1.6;
+}
+/* ========== SERVICE AREAS ========== */
+.pvp-page .areas-section { background: #FAFAFA; }
+.pvp-page .areas-section .section-header {
+text-align: center;
+max-width: 700px;
+margin: 0 auto 25px;
+}
+.pvp-page .areas-section .section-header p {
+font-size: 0.95rem;
+color: #2C2C2C;
+margin-top: 8px;
+}
+.pvp-page .areas-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+max-width: 800px;
+margin: 0 auto 20px;
+}
+.pvp-page .area-link {
+display: flex;
+align-items: center;
+gap: 8px;
+background: #FFFFFF;
+padding: 12px 15px;
+border-radius: 6px;
+font-size: 0.85rem;
+font-weight: 600;
+color: #2C2C2C;
+transition: all 0.3s ease;
+border: 1px solid #EEEEEE;
+text-decoration: none;
+}
+.pvp-page .area-link i {
+color: #0099CC;
+font-size: 0.8rem;
+flex-shrink: 0;
+}
+.pvp-page .area-link:hover {
+background: #0099CC;
+color: #FFFFFF;
+border-color: #0099CC;
+}
+.pvp-page .area-link:hover i { color: #FFFFFF; }
+.pvp-page .areas-cta { text-align: center; }
+/* ========== EMERGENCY BANNER ========== */
+.pvp-page .emergency-banner {
+background: linear-gradient(135deg, #dc3545 0%, #a71d2a 100%);
+color: #FFFFFF;
+text-align: center;
+}
+.pvp-page .emergency-banner .container { max-width: 800px; }
+.pvp-page .emergency-banner .emergency-icon {
+font-size: 2.5rem;
+margin-bottom: 10px;
+display: block;
+}
+.pvp-page .emergency-banner h2 { color: #FFFFFF; margin-bottom: 10px; }
+.pvp-page .emergency-banner p {
+color: rgba(255,255,255,0.95);
+font-size: 0.95rem;
+margin-bottom: 15px;
+}
+.pvp-page .emergency-banner .btn {
+background: #FFFFFF;
+color: #dc3545;
+}
+.pvp-page .emergency-banner .btn:hover {
+background: #F0F0F0;
+color: #a71d2a;
+transform: translateY(-2px);
+}
+/* ========== CONTACT CTA SECTION ========== */
+.pvp-page .contact-cta-section {
+background: linear-gradient(135deg, #0099CC 0%, #0077AA 100%);
+color: #FFFFFF;
+}
+.pvp-page .contact-cta-grid {
+display: flex;
+flex-direction: column;
+gap: 30px;
+}
+.pvp-page .contact-cta-content h2 { color: #FFFFFF; margin-bottom: 10px; }
+.pvp-page .contact-cta-content > p {
+color: rgba(255,255,255,0.95);
+font-size: 0.95rem;
+margin-bottom: 15px;
+}
+.pvp-page .contact-details-list { margin: 0; padding: 0; }
+.pvp-page .contact-details-list li {
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 10px 0;
+color: #FFFFFF;
+font-size: 0.9rem;
+}
+.pvp-page .contact-details-list li i {
+background: rgba(255,255,255,0.2);
+padding: 10px;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+color: #FFFFFF;
+font-size: 1rem;
+}
+.pvp-page .contact-details-list li a { color: #FFFFFF; word-break: break-word; }
+.pvp-page .contact-details-list li a:hover {
+color: #F0F0F0;
+text-decoration: underline;
+}
+.pvp-page .contact-cta-content .btn {
+background: #FFFFFF;
+color: #0099CC;
+margin-top: 15px;
+}
+.pvp-page .contact-cta-content .btn:hover {
+background: #F0F0F0;
+color: #0077AA;
+transform: translateY(-2px);
+}
+.pvp-page .contact-cta-form {
+background: #FFFFFF;
+border-radius: 8px;
+padding: 20px 15px;
+box-shadow: 0 8px 30px rgba(44,44,44,0.15);
+border-top: 4px solid #FFFFFF;
+}
+.pvp-page .contact-cta-form h3 {
+text-align: center;
+margin-bottom: 15px;
+font-size: 1.1rem;
+color: #2C2C2C;
+}
+.pvp-page .contact-cta-form iframe {
+width: 100%;
+min-height: 400px;
+border: none;
+display: block;
+}
+/* ========== FOOTER ========== */
+.pvp-page .pvp-footer {
+background: #2C2C2C;
+color: #FFFFFF;
+padding: 40px 0 100px;
+}
+.pvp-page .footer-grid {
+display: flex;
+flex-direction: column;
+gap: 30px;
+}
+.pvp-page .footer-col h3 {
+font-size: 1rem;
+border-bottom: 2px solid #0099CC;
+padding-bottom: 10px;
+margin-bottom: 15px;
+display: inline-block;
+color: #FFFFFF;
+}
+.pvp-page .footer-logo-img {
+background: #FFFFFF;
+padding: 10px;
+border-radius: 8px;
+margin-bottom: 15px;
+max-width: 140px;
+display: inline-block;
+}
+.pvp-page .footer-col > p {
+color: #CCCCCC;
+font-size: 0.9rem;
+line-height: 1.6;
+}
+.pvp-page .footer-links {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 8px;
+margin: 0;
+padding: 0;
+}
+.pvp-page .footer-links li { margin-bottom: 0; }
+.pvp-page .footer-links a {
+color: #CCCCCC;
+font-size: 0.9rem;
+display: block;
+padding: 5px 0;
+transition: color 0.3s ease, padding-left 0.3s ease;
+}
+.pvp-page .footer-links a:hover {
+color: #0099CC;
+padding-left: 5px;
+}
+.pvp-page .footer-contact { margin: 0; padding: 0; }
+.pvp-page .footer-contact p {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+margin-bottom: 10px;
+font-size: 0.9rem;
+color: #CCCCCC;
+}
+.pvp-page .footer-contact i {
+color: #0099CC;
+margin-top: 3px;
+flex-shrink: 0;
+font-size: 0.9rem;
+width: 16px;
+}
+.pvp-page .footer-contact a {
+color: #0099CC;
+word-break: break-word;
+transition: color 0.3s ease;
+}
+.pvp-page .footer-contact a:hover { color: #FFFFFF; }
+.pvp-page .copyright {
+border-top: 1px solid rgba(255,255,255,0.1);
+padding-top: 20px;
+margin-top: 30px;
+text-align: center;
+font-size: 0.8rem;
+color: rgba(255,255,255,0.6);
+}
+.pvp-page .copyright p {
+color: rgba(255,255,255,0.6);
+margin: 0;
+}
+/* ========== MOBILE CALL BUTTON ========== */
+.pvp-page .mobile-call-btn {
+display: flex;
+align-items: center;
+justify-content: center;
+position: fixed;
+bottom: 0; left: 0;
+width: 100%;
+background: linear-gradient(135deg, #0099CC 0%, #0077AA 100%);
+color: #FFFFFF;
+padding: 14px;
+font-weight: 700;
+font-size: 1rem;
+z-index: 9998;
+box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+gap: 10px;
+text-decoration: none;
+}
+.pvp-page .mobile-call-btn:hover {
+background: linear-gradient(135deg, #0077AA 0%, #005588 100%);
+color: #FFFFFF;
+}
+.pvp-page .mobile-call-btn i {
+animation: pvp-ring 1s infinite;
+font-size: 1.1rem;
+}
+@keyframes pvp-ring {
+0%, 100% { transform: rotate(0); }
+25% { transform: rotate(-10deg); }
+75% { transform: rotate(10deg); }
+}
+/* ========== POPUP ========== */
+.pvp-page .popup-overlay {
+display: none;
+position: fixed;
+top: 0; left: 0; right: 0; bottom: 0;
+width: 100%; height: 100%;
+background: rgba(0,0,0,0.85);
+z-index: 999999;
+align-items: center;
+justify-content: center;
+padding: 15px;
+}
+.pvp-page .popup-overlay.active { display: flex !important; }
+.pvp-page .popup-box {
+background: #FFFFFF;
+border-radius: 12px;
+max-width: 300px;
+width: 100%;
+text-align: center;
+overflow: visible;
+box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+position: relative;
+animation: pvp-popupSlide 0.3s ease;
+}
+@keyframes pvp-popupSlide {
+from { opacity: 0; transform: scale(0.9) translateY(-20px); }
+to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.pvp-page .popup-close {
+position: absolute;
+top: -12px; right: -12px;
+width: 36px; height: 36px;
+background: #2C2C2C;
+border: 3px solid #FFFFFF;
+border-radius: 50%;
+cursor: pointer;
+color: #FFFFFF;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 10;
+transition: background 0.3s ease;
+padding: 0;
+}
+.pvp-page .popup-close:hover { background: #0099CC; }
+.pvp-page .popup-close i { font-size: 0.9rem; color: #FFFFFF; }
+.pvp-page .popup-header {
+background: linear-gradient(135deg, #0099CC 0%, #0077AA 100%);
+color: #FFFFFF;
+padding: 25px 20px;
+border-radius: 12px 12px 0 0;
+}
+.pvp-page .popup-header > i {
+font-size: 2rem;
+margin-bottom: 8px;
+display: block;
+color: #FFFFFF;
+}
+.pvp-page .popup-header h3 { color: #FFFFFF; font-size: 1.2rem; margin: 0; }
+.pvp-page .popup-body { padding: 25px 20px; }
+.pvp-page .popup-body .btn {
+width: 100%;
+padding: 14px;
+font-size: 1rem;
+background: #0099CC;
+color: #FFFFFF;
+}
+.pvp-page .popup-body .btn:hover { background: #0077AA; }
+.pvp-page .popup-phone {
+display: block;
+margin-top: 12px;
+font-size: 1.2rem;
+font-weight: 700;
+color: #2C2C2C;
+transition: color 0.3s ease;
+text-decoration: none;
+}
+.pvp-page .popup-phone:hover { color: #0099CC; }
+/* ========== TABLET (600px+) ========== */
+@media (min-width: 600px) {
+.pvp-page .container { padding: 0 20px; }
+.pvp-page .section-padding { padding: 50px 0; }
+.pvp-page .hero-section { padding: 50px 0; }
+.pvp-page .hero-form { padding: 25px; }
+.pvp-page .services-grid { grid-template-columns: 1fr 1fr; }
+.pvp-page .why-grid { grid-template-columns: 1fr 1fr; }
+.pvp-page .areas-grid { grid-template-columns: 1fr 1fr 1fr; }
+.pvp-page .contact-cta-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 30px;
+align-items: center;
+}
+.pvp-page .footer-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 30px;
+}
+.pvp-page .footer-links { grid-template-columns: 1fr; }
+}
+/* ========== DESKTOP (992px+) ========== */
+@media (min-width: 992px) {
+.pvp-page .container { padding: 0 40px; }
+.pvp-page .section-padding { padding: 80px 0; }
+.pvp-page .top-bar { display: block; }
+.pvp-page .nav-container { padding: 15px 40px; }
+.pvp-page .logo img { max-height: 65px; }
+.pvp-page .mobile-toggle { display: none; }
+.pvp-page .nav-cta-mobile { display: none; }
+.pvp-page .nav-menu {
+display: flex !important;
+position: static;
+width: auto; height: auto;
+background: transparent;
+flex-direction: row;
+padding: 0;
+overflow: visible;
+gap: 30px;
+align-items: center;
+}
+.pvp-page .nav-item { width: auto; border-bottom: none; position: relative; padding: 0; }
+.pvp-page .nav-item > a { padding: 12px 0; gap: 5px; }
+.pvp-page .nav-item:hover > a { color: #0099CC; }
+.pvp-page .nav-item:hover > a i { transform: rotate(180deg); }
+.pvp-page .dropdown {
+display: none;
+position: absolute;
+top: 100%; left: 0;
+background: #FFFFFF;
+min-width: 260px;
+box-shadow: 0 8px 30px rgba(44,44,44,0.15);
+border-top: 3px solid #0099CC;
+padding: 0;
+max-height: 400px;
+overflow-y: auto;
+border-radius: 0 0 8px 8px;
+z-index: 1001;
+}
+.pvp-page .nav-item:hover .dropdown { display: block; }
+.pvp-page .dropdown li a { padding: 12px 18px; border-bottom: 1px solid #DDDDDD; }
+.pvp-page .dropdown li a:hover { background: #F5F7FA; color: #0099CC; padding-left: 22px; }
+.pvp-page .nav-cta-section { display: none; }
+.pvp-page .nav-cta-desktop { display: flex; margin-left: auto; }
+.pvp-page .hero-section { padding: 80px 0; }
+.pvp-page .hero-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+align-items: center;
+}
+.pvp-page .hero-subtitle { font-size: 1.3rem; }
+.pvp-page .hero-content > p { font-size: 1.05rem; }
+.pvp-page .hero-form { padding: 30px; }
+.pvp-page .hero-form h3 { font-size: 1.3rem; }
+.pvp-page .hero-form iframe { min-height: 450px; }
+.pvp-page .services-grid { grid-template-columns: 1fr 1fr 1fr; }
+.pvp-page .why-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
+.pvp-page .areas-grid { grid-template-columns: repeat(4, 1fr); }
+.pvp-page .contact-cta-grid { gap: 60px; }
+.pvp-page .contact-cta-form { padding: 35px; }
+.pvp-page .contact-cta-form iframe { min-height: 450px; }
+.pvp-page .pvp-footer { padding: 60px 0 30px; }
+.pvp-page .footer-grid {
+display: grid;
+grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+gap: 50px;
+}
+.pvp-page .mobile-call-btn { display: none; }
+}
+/* ========== LARGE DESKTOP (1200px+) ========== */
+@media (min-width: 1200px) {
+.pvp-page .container { max-width: 1400px; }
+.pvp-page .nav-menu { gap: 35px; }
+.pvp-page .hero-grid { gap: 80px; }
+}
+</style>
+<!-- ========== MAIN WRAPPER ========== -->
+<div class="pvp-page">
+<!-- Popup -->
+<div class="popup-overlay" id="pvpPopup">
+<div class="popup-box">
+<button class="popup-close" id="pvpPopupClose" type="button" aria-label="Close">
+<i class="fas fa-times"></i>
+</button>
+<div class="popup-header">
+<i class="fas fa-pipe-valve"></i>
+<h3>Same-Day Plumbing Service</h3>
+</div>
+<div class="popup-body">
+<a href="tel:+14142792050" class="btn"><i class="fas fa-phone"></i> Call Right Now</a>
+<a href="tel:+14142792050" class="popup-phone">+1 (414) 279-2050</a>
+</div>
+</div>
+</div>
+<!-- Top Bar -->
+<div class="top-bar">
+<div class="container">
+<div class="top-info">
+<span><i class="fas fa-map-marker-alt"></i>836–838 N Old World 3rd St, Milwaukee, WI 53203</span>
+<span><i class="fas fa-check-double"></i>50 Licensed Plumbers — 5 Stocked Vans Ready Now</span>
+<span><i class="fas fa-envelope"></i><a href="mailto:calatmilwauplumbing@gmail.com">calatmilwauplumbing@gmail.com</a></span>
+</div>
+<div class="social-icons">
+<span>Follow Us:</span>
+<a href="https://www.facebook.com/calatmilwauplumbing" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://www.instagram.com/calatmilwauplumbing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://x.com/calatmilwauplumbing" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+<a href="https://www.pinterest.com/calatmilwauplumbing/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+<a href="https://www.youtube.com/@CalatMilwauPlumbing" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+<a href="https://www.tiktok.com/@calatmilwauplumbing" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+</div>
+</div>
+</div>
+<!-- Navigation -->
+<nav class="main-nav">
+<div class="nav-container">
+<a href="https://emergencyplumbermilwaukeewi.com/" class="logo">
+<img src="https://emergencyplumbermilwaukeewi.com/wp-content/uploads/2026/02/Calat-Milwau-Plumbing-Logo-e1772147327638.png" alt="Calat Milwau Plumbing Milwaukee Wisconsin" width="150" height="60">
+</a>
+<div class="nav-cta-mobile">
+<a href="tel:+14142792050" class="btn" aria-label="Call Now">
+<i class="fas fa-phone"></i>
+</a>
+<button class="mobile-toggle" id="pvpMobileToggle" type="button" aria-label="Menu">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+<ul class="nav-menu" id="pvpNavMenu">
+<li class="nav-item"><a href="https://emergencyplumbermilwaukeewi.com/" class="active">Home</a></li>
+<li class="nav-item"><a href="https://emergencyplumbermilwaukeewi.com/about/">About</a></li>
+<li class="nav-item dropdown-trigger">
+<a href="https://emergencyplumbermilwaukeewi.com/services/">Services <i class="fas fa-caret-down"></i></a>
+<ul class="dropdown">
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/backflow-testing-repair-replacement/">Backflow Testing Repair &amp; Replacement</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/boiler-repair-replacement/">Boiler Installation, Repair &amp; Replacement</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/bathroom-remodeling/">Bathroom Remodeling</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/kitchen-remodeling/">Kitchen Remodeling</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/bathtub-repair-replacement/">Bathtub Repair &amp; Replacement</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/drain-cleaning/">Drain Cleaning</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/faucets-sinks-repair-replacement/">Faucets &amp; Sinks Repair Replacement</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/garbage-disposal-repair-replacement/">Garbage Disposal Repair &amp; Replacement</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/gas-line-repair-replacement/">Gas Line Repair &amp; Replacement</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/pipe-repair-replacement/">Pipe Repair &amp; Replacement</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/sewer-line-repair-replacement/">Sewer Line Repair &amp; Replacement</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/slab-leak-detection/">Slab Leak Detection</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/sewer-camera-inspection/">Sewer Camera Inspection</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/septic-tank-cleaning/">Septic Tank Cleaning</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/shower-repair-replacement/">Shower Repair &amp; Replacement</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/sump-pump-repair-replacement/">Sump Pump Repair &amp; Replacement</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/toilet-repair-replacement/">Toilet Repair &amp; Replacement</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/water-damage-restoration/">Water Damage Restoration</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/water-heater-repair-replacement/">Water Heater Repair &amp; Replacement</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/water-leak-detection/">Water Leak Detection</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/water-line-repair-replacement/">Water Line Repair &amp; Replacement</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/water-filtration-repair-replacement/">Water Filtration Repair &amp; Replacement</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown-trigger">
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/">Service Areas <i class="fas fa-caret-down"></i></a>
+<ul class="dropdown">
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/westown/">Westown</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/historic-third-ward/">Historic Third Ward</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/deer-district/">Deer District</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/east-town/">East Town</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/milwaukee-riverwalk/">Milwaukee RiverWalk</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/menomonee-river-valley/">Menomonee River Valley</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/lake-michigan-lakefront/">Lake Michigan Lakefront</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/walkers-point/">Walker's Point</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/lower-east-side/">Lower East Side</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/marquette-avenues-west/">Marquette / Avenues West</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/brewers-hill/">Brewers Hill</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/harbor-district/">Harbor District</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/bay-view/">Bay View</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/brady-street-area/">Brady Street Area</a></li>
+</ul>
+</li>
+<li class="nav-item"><a href="https://emergencyplumbermilwaukeewi.com/contact/">Contact</a></li>
+<li class="nav-cta-desktop">
+<a href="tel:+14142792050" class="btn">
+<i class="fas fa-phone"></i> +1 (414) 279-2050
+</a>
+</li>
+<li class="nav-cta-section">
+<a href="tel:+14142792050" class="btn">
+<i class="fas fa-phone"></i> Call: +1 (414) 279-2050
+</a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- ========== HERO SECTION ========== -->
+<section class="hero-section">
+<div class="container">
+<div class="hero-grid">
+<div class="hero-content">
+<h1>Milwaukee's Highest-Rated Plumbing Team — Solving Problems Faster Than Any Plumber in the City</h1>
+<p class="hero-subtitle">Award-Winning Plumbing Service for Milwaukee Homes, Businesses &amp; Industries Since 1990</p>
+<p>When something goes wrong with your plumbing in <a href="https://emergencyplumbermilwaukeewi.com/service-areas/walkers-point/" style="color:#0099CC;text-decoration:underline;">Walker's Point</a>, <a href="https://emergencyplumbermilwaukeewi.com/service-areas/harbor-district/" style="color:#0099CC;text-decoration:underline;">Harbor District</a>, or anywhere across Milwaukee County, Calat Milwau Plumbing is already nearby. With <strong>50 licensed professionals</strong> and <strong>5 fully loaded service vans</strong> based on Old World 3rd Street since 1990, we are the local team that arrives fast, diagnoses accurately, and repairs permanently — every single time. No trip charges ever. No surprise invoices. Just dependable plumbing done right.</p>
+<div class="hero-badges">
+<span class="hero-badge"><i class="fas fa-award"></i> BBB Torch Award</span>
+<span class="hero-badge"><i class="fas fa-calendar-check"></i> Since 1990</span>
+<span class="hero-badge"><i class="fas fa-clock"></i> Always Available</span>
+<span class="hero-badge"><i class="fas fa-tag"></i> Upfront Pricing</span>
+</div>
+</div>
+<div class="hero-form">
+<h3>Claim Your Free Plumbing Estimate</h3>
+<iframe src="https://leads.leadsmartinc.com/?api_key=eb7353a561f876a7c03543787a0cd05ac8a926d3&affiliate_source=2mhnfdbill1&funnel=3&category=1&step=1&buttons=btn-danger" title="Free Milwaukee Plumbing Estimate" loading="lazy"></iframe>
+</div>
+</div>
+</div>
+</section>
+<!-- ========== INTRO SECTION ========== -->
+<section class="intro-section section-padding">
+<div class="container">
+<div class="intro-wrapper">
+<h2>Milwaukee's Plumbing Company Built on Integrity, Speed &amp; Lasting Repairs</h2>
+<p>Not every plumbing company is created equal — and Milwaukee homeowners have known the difference for 35 years. Calat Milwau Plumbing was built from the ground up on a single principle: do the job right the first time, charge a fair price, and treat every customer like a neighbor. That philosophy has earned us recognition as a <strong>Nextdoor Neighborhood Favorite</strong>, Top-Rated status on both Google and Yelp, and the industry's most coveted honors including the <strong>Carrier President's Award</strong> and the <strong>BBB Torch Award for Ethics</strong>.</p>
+<p>Our team of <strong>50 fully licensed plumbers</strong> brings specialized expertise that few Milwaukee companies can match. We hold certifications in <strong>cross connection control testing</strong>, <strong>medical gas installation</strong>, and comprehensive hydronic heating — enabling us to take on complex jobs at hospitals, restaurants, breweries, and industrial facilities in the <a href="https://emergencyplumbermilwaukeewi.com/service-areas/menomonee-river-valley/" class="inline-link">Menomonee River Valley</a> and beyond. For residential customers in neighborhoods like <a href="https://emergencyplumbermilwaukeewi.com/service-areas/brewers-hill/" class="inline-link">Brewers Hill</a> or the <a href="https://emergencyplumbermilwaukeewi.com/service-areas/lake-michigan-lakefront/" class="inline-link">Lake Michigan Lakefront</a>, we offer everything from urgent <a href="https://emergencyplumbermilwaukeewi.com/services/water-leak-detection/" class="inline-link">water leak detection</a> to full <a href="https://emergencyplumbermilwaukeewi.com/services/kitchen-remodeling/" class="inline-link">kitchen remodeling</a> — all under one trusted roof.</p>
+<p>We accept insurance coverage from <strong>American Home Shield</strong>, <strong>Allstate</strong>, <strong>State Farm</strong>, <strong>American Family Insurance</strong>, and <strong>Liberty Home Guard</strong>, making covered repairs as smooth and stress-free as possible. Ready to get started? <a href="https://emergencyplumbermilwaukeewi.com/contact/" class="inline-link">Contact our Milwaukee team</a> today or browse our <a href="https://emergencyplumbermilwaukeewi.com/services/" class="inline-link">complete services catalog</a> to find exactly what you need.</p>
+</div>
+</div>
+</section>
+<!-- ========== SERVICES SECTION ========== -->
+<section class="services-section section-padding">
+<div class="container">
+<div class="section-header">
+<h2>23 Professional Plumbing Services — One Reliable Milwaukee Company</h2>
+<p>From leaking faucets to full sewer line replacements, our licensed team handles every job with the same level of care, precision, and professional workmanship. <a href="https://emergencyplumbermilwaukeewi.com/services/" style="color:#0099CC;font-weight:700;">See the complete service list here.</a></p>
+</div>
+<div class="services-grid">
+<a href="https://emergencyplumbermilwaukeewi.com/services/drain-cleaning/" class="service-card">
+<div class="service-icon"><i class="fas fa-sink"></i></div>
+<div class="service-info">
+<h4>Drain Cleaning</h4>
+<p>Slow or blocked drains cleared using professional hydro jetting and mechanical snaking — permanently, not temporarily.</p>
+</div>
+</a>
+<a href="https://emergencyplumbermilwaukeewi.com/services/water-heater-repair-replacement/" class="service-card">
+<div class="service-icon"><i class="fas fa-hot-tub"></i></div>
+<div class="service-info">
+<h4>Water Heater Repair &amp; Replacement</h4>
+<p>Tank and tankless water heater installation, repair, and emergency replacement — same-day service available.</p>
+</div>
+</a>
+<a href="https://emergencyplumbermilwaukeewi.com/services/sewer-line-repair-replacement/" class="service-card">
+<div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+<div class="service-info">
+<h4>Sewer Line Repair &amp; Replacement</h4>
+<p>Trenchless technology restores sewer lines quickly with minimal disruption to Milwaukee yards and driveways.</p>
+</div>
+</a>
+<a href="https://emergencyplumbermilwaukeewi.com/services/sewer-camera-inspection/" class="service-card">
+<div class="service-icon"><i class="fas fa-camera"></i></div>
+<div class="service-info">
+<h4>Sewer Camera Inspection</h4>
+<p>Real-time HD video reveals exactly what is happening inside your pipes — saving time and money on guesswork repairs.</p>
+</div>
+</a>
+<a href="https://emergencyplumbermilwaukeewi.com/services/water-damage-restoration/" class="service-card">
+<div class="service-icon"><i class="fas fa-wind"></i></div>
+<div class="service-info">
+<h4>Water Damage Restoration</h4>
+<p>Rapid water extraction, industrial drying, and remediation services to protect your property after a plumbing failure.</p>
+</div>
+</a>
+<a href="https://emergencyplumbermilwaukeewi.com/services/sump-pump-repair-replacement/" class="service-card">
+<div class="service-icon"><i class="fas fa-fan"></i></div>
+<div class="service-info">
+<h4>Sump Pump Repair &amp; Replacement</h4>
+<p>New sump pump installs, battery backup systems, and emergency repairs to keep Milwaukee basements dry year-round.</p>
+</div>
+</a>
+<a href="https://emergencyplumbermilwaukeewi.com/services/gas-line-repair-replacement/" class="service-card">
+<div class="service-icon"><i class="fas fa-flame"></i></div>
+<div class="service-info">
+<h4>Gas Line Repair &amp; Replacement</h4>
+<p>Licensed gas line service for appliances, fireplaces, outdoor kitchens, and generators — installed safely and to code.</p>
+</div>
+</a>
+<a href="https://emergencyplumbermilwaukeewi.com/services/bathroom-remodeling/" class="service-card">
+<div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
+<div class="service-info">
+<h4>Bathroom Remodeling</h4>
+<p>Complete bathroom plumbing reconfiguration — fixture replacements, layout changes, and new construction rough-ins.</p>
+</div>
+</a>
+<a href="https://emergencyplumbermilwaukeewi.com/services/water-line-repair-replacement/" class="service-card">
+<div class="service-icon"><i class="fas fa-faucet-drip"></i></div>
+<div class="service-info">
+<h4>Water Line Repair &amp; Replacement</h4>
+<p>Main water line repairs, service line upgrades, and emergency shut-off replacement handled efficiently by our licensed team.</p>
+</div>
+</a>
+<a href="https://emergencyplumbermilwaukeewi.com/services/toilet-repair-replacement/" class="service-card">
+<div class="service-icon"><i class="fas fa-toilet-paper"></i></div>
+<div class="service-info">
+<h4>Toilet Installation, Repair &amp; Replacement</h4>
+<p>Constant running, weak flush, or complete toilet failure — we fix or replace it the same day you call.</p>
+</div>
+</a>
+<a href="https://emergencyplumbermilwaukeewi.com/services/backflow-testing-repair-replacement/" class="service-card">
+<div class="service-icon"><i class="fas fa-arrows-left-right"></i></div>
+<div class="service-info">
+<h4>Backflow Testing, Repair &amp; Replacement</h4>
+<p>Certified annual backflow inspections and device replacements to keep your water supply clean and compliant.</p>
+</div>
+</a>
+<a href="https://emergencyplumbermilwaukeewi.com/services/pipe-repair-replacement/" class="service-card">
+<div class="service-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+<div class="service-info">
+<h4>Pipe Repair &amp; Replacement</h4>
+<p>Burst pipe repairs, frozen pipe restoration, and full repiping of aging Milwaukee homes using copper or PEX tubing.</p>
+</div>
+</a>
+</div>
+<div style="text-align:center;margin-top:25px;">
+<a href="https://emergencyplumbermilwaukeewi.com/services/" class="btn"><i class="fas fa-th-list"></i> All 23 Plumbing Services</a>
+</div>
+</div>
+</section>
+<!-- ========== WHY CHOOSE US SECTION ========== -->
+<section class="why-section section-padding">
+<div class="container">
+<div class="section-header">
+<h2>What Keeps Milwaukee Calling Calat Milwau Plumbing — Year After Year</h2>
+<p>Since 1990, we have refined every part of the customer experience to make hiring a plumber easier, more affordable, and completely stress-free for Milwaukee homeowners and businesses.</p>
+</div>
+<div class="why-grid">
+<div class="why-card">
+<div class="why-icon"><i class="fas fa-location-arrow"></i></div>
+<h4>Centrally Located for Fast Dispatch</h4>
+<p>Our Old World 3rd Street base puts our vans at the geographic center of Milwaukee — faster to <a href="https://emergencyplumbermilwaukeewi.com/service-areas/east-town/" style="color:#0099CC;">East Town</a>, <a href="https://emergencyplumbermilwaukeewi.com/service-areas/deer-district/" style="color:#0099CC;">Deer District</a>, and beyond than any suburban company.</p>
+</div>
+<div class="why-card">
+<div class="why-icon"><i class="fas fa-pen-to-square"></i></div>
+<h4>Written Estimates Before Work Starts</h4>
+<p>Every quote is provided in writing and fully explained before our plumber picks up a single tool — no surprises, no pressure tactics.</p>
+</div>
+<div class="why-card">
+<div class="why-icon"><i class="fas fa-van-shuttle"></i></div>
+<h4>5 Fully Stocked Service Vans</h4>
+<p>Each van carries thousands of common parts and specialty tools so the vast majority of repairs are completed without a second trip.</p>
+</div>
+<div class="why-card">
+<div class="why-icon"><i class="fas fa-flask"></i></div>
+<h4>Medical Gas &amp; Industrial Certified</h4>
+<p>Rare certifications in medical gas installation and cross connection control testing make us one of Milwaukee's most qualified plumbing firms.</p>
+</div>
+<div class="why-card">
+<div class="why-icon"><i class="fas fa-moon"></i></div>
+<h4>No Overtime Fees — Ever</h4>
+<p>We charge the same flat rate at 2 AM on a holiday weekend as we do at 10 AM on a Tuesday — because emergencies deserve fair pricing too.</p>
+</div>
+<div class="why-card">
+<div class="why-icon"><i class="fas fa-people-group"></i></div>
+<h4>A Team of 50 — Not a Solo Operator</h4>
+<p>We have the depth to handle multiple simultaneous jobs across Milwaukee without making any customer wait — capacity no solo plumber can match.</p>
+</div>
+<div class="why-card">
+<div class="why-icon"><i class="fas fa-umbrella"></i></div>
+<h4>All Major Insurance Accepted</h4>
+<p>We file and manage claims with American Home Shield, State Farm, Allstate, American Family, and Liberty Home Guard on your behalf.</p>
+</div>
+<div class="why-card">
+<div class="why-icon"><i class="fas fa-trophy"></i></div>
+<h4>5 Awards — Verified Excellence</h4>
+<p>Carrier President's Award, Angi Super Service Award, BBB Torch Award, Top-Rated on Google &amp; Yelp, and Nextdoor Neighborhood Favorite.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========== SERVICE AREAS SECTION ========== -->
+<section class="areas-section section-padding">
+<div class="container">
+<div class="section-header">
+<h2>Serving Milwaukee's Most Vibrant Neighborhoods — Including Yours</h2>
+<p>From the boutiques and galleries of the <a href="https://emergencyplumbermilwaukeewi.com/service-areas/historic-third-ward/" style="color:#0099CC;font-weight:700;">Historic Third Ward</a> to the waterfront properties along <a href="https://emergencyplumbermilwaukeewi.com/service-areas/lake-michigan-lakefront/" style="color:#0099CC;font-weight:700;">Lake Michigan</a> — our plumbing vans cover every major Milwaukee neighborhood and all of Milwaukee County.</p>
+</div>
+<div class="areas-grid">
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/westown/" class="area-link"><i class="fas fa-map-marker-alt"></i> Westown</a>
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/historic-third-ward/" class="area-link"><i class="fas fa-map-marker-alt"></i> Historic Third Ward</a>
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/deer-district/" class="area-link"><i class="fas fa-map-marker-alt"></i> Deer District</a>
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/east-town/" class="area-link"><i class="fas fa-map-marker-alt"></i> East Town</a>
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/milwaukee-riverwalk/" class="area-link"><i class="fas fa-map-marker-alt"></i> Milwaukee RiverWalk</a>
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/menomonee-river-valley/" class="area-link"><i class="fas fa-map-marker-alt"></i> Menomonee River Valley</a>
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/lake-michigan-lakefront/" class="area-link"><i class="fas fa-map-marker-alt"></i> Lake Michigan Lakefront</a>
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/walkers-point/" class="area-link"><i class="fas fa-map-marker-alt"></i> Walker's Point</a>
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/lower-east-side/" class="area-link"><i class="fas fa-map-marker-alt"></i> Lower East Side</a>
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/marquette-avenues-west/" class="area-link"><i class="fas fa-map-marker-alt"></i> Marquette / Avenues West</a>
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/brewers-hill/" class="area-link"><i class="fas fa-map-marker-alt"></i> Brewers Hill</a>
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/harbor-district/" class="area-link"><i class="fas fa-map-marker-alt"></i> Harbor District</a>
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/bay-view/" class="area-link"><i class="fas fa-map-marker-alt"></i> Bay View</a>
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/brady-street-area/" class="area-link"><i class="fas fa-map-marker-alt"></i> Brady Street Area</a>
+</div>
+<div class="areas-cta">
+<a href="https://emergencyplumbermilwaukeewi.com/service-areas/" class="btn"><i class="fas fa-map-location-dot"></i> View Complete Coverage Area</a>
+</div>
+</div>
+</section>
+<!-- ========== EMERGENCY BANNER ========== -->
+<section class="emergency-banner section-padding">
+<div class="container">
+<span class="emergency-icon"><i class="fas fa-triangle-exclamation"></i></span>
+<h2>Water Where It Should Not Be? We Are Dispatching a Plumber to You Right Now</h2>
+<p>A sewage backup, burst pipe, or failed water heater is not a problem that gets better with time — it gets worse and more expensive. Calat Milwau Plumbing operates a <strong>fully staffed, live emergency line around the clock</strong>, 365 days per year. Call now and a licensed Milwaukee plumber will be at your door — not tomorrow, not after an intake form — but as quickly as our closest van can reach you.</p>
+<a href="tel:+14142792050" class="btn"><i class="fas fa-phone-volume"></i> Emergency Dispatch: +1 (414) 279-2050</a>
+</div>
+</section>
+<!-- ========== CONTACT CTA SECTION ========== -->
+<section class="contact-cta-section section-padding">
+<div class="container">
+<div class="contact-cta-grid">
+<div class="contact-cta-content">
+<h2>Let's Fix Your Plumbing Problem — Starting Today</h2>
+<p>Whether you need <a href="https://emergencyplumbermilwaukeewi.com/services/slab-leak-detection/" style="color:#FFFFFF;text-decoration:underline;">slab leak detection</a> beneath a Historic Third Ward loft, <a href="https://emergencyplumbermilwaukeewi.com/services/boiler-repair-replacement/" style="color:#FFFFFF;text-decoration:underline;">boiler service</a> in a Brewers Hill two-flat, or a <a href="https://emergencyplumbermilwaukeewi.com/services/water-filtration-repair-replacement/" style="color:#FFFFFF;text-decoration:underline;">whole-home water filtration system</a> — call us or submit the form for a fast, free written estimate. Our 50-person team is standing by and ready to serve you anywhere in Milwaukee County today.</p>
+<ul class="contact-details-list">
+<li><i class="fas fa-phone"></i> <a href="tel:+14142792050">+1 (414) 279-2050</a></li>
+<li><i class="fas fa-envelope"></i> <a href="mailto:calatmilwauplumbing@gmail.com">calatmilwauplumbing@gmail.com</a></li>
+<li><i class="fas fa-map-marker-alt"></i> <span>910 N Doctor M.L.K. Jr Dr, Milwaukee, WI 53203</span></li>
+<li><i class="fas fa-calendar-alt"></i> <span>Available 24/7 — 365 Days a Year</span></li>
+</ul>
+<a href="tel:+14142792050" class="btn"><i class="fas fa-phone"></i> Call for Immediate Help</a>
+</div>
+<div class="contact-cta-form">
+<h3>Get Your Free Written Estimate</h3>
+<iframe src="https://leads.leadsmartinc.com/?api_key=eb7353a561f876a7c03543787a0cd05ac8a926d3&affiliate_source=2mhnfdbill1&funnel=3&category=1&step=1&buttons=btn-danger" title="Milwaukee Plumbing Free Estimate Form" loading="lazy"></iframe>
+</div>
+</div>
+</div>
+</section>
+<!-- ========== FOOTER ========== -->
+<footer class="pvp-footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-col">
+<div class="footer-logo-img">
+<img src="https://emergencyplumbermilwaukeewi.com/wp-content/uploads/2026/02/Calat-Milwau-Plumbing-Logo-e1772147327638.png" alt="Calat Milwau Plumbing Milwaukee WI" width="140" height="55" loading="lazy">
+</div>
+<p>Calat Milwau Plumbing is Milwaukee's award-winning, full-service plumbing company. Established in 1990 and headquartered on Old World 3rd Street, our 50-member licensed team and 5 fully stocked vans serve residential, commercial, and industrial clients across all of Milwaukee County — 24 hours a day, every day of the year.</p>
+</div>
+<div class="footer-col">
+<h3>Quick Links</h3>
+<ul class="footer-links">
+<li><a href="https://emergencyplumbermilwaukeewi.com/">Home</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/about/">About Us</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/">All Services</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/service-areas/">Service Areas</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/contact/">Contact Us</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/privacy-policy/">Privacy Policy</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/disclaimer/">Disclaimer</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/terms-conditions/">Terms &amp; Conditions</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/sitemap/">Sitemap</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>More Services</h3>
+<ul class="footer-links">
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/shower-repair-replacement/">Shower Repair</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/bathtub-repair-replacement/">Bathtub Repair</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/faucets-sinks-repair-replacement/">Faucet &amp; Sink Repair</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/garbage-disposal-repair-replacement/">Garbage Disposal</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/septic-tank-cleaning/">Septic Tank Pumping</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/water-filtration-repair-replacement/">Water Filtration</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/slab-leak-detection/">Slab Leak Detection</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/boiler-repair-replacement/">Boiler Service</a></li>
+<li><a href="https://emergencyplumbermilwaukeewi.com/services/kitchen-remodeling/">Kitchen Remodeling</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h3>Contact Info</h3>
+<address class="footer-contact">
+<p><i class="fas fa-map-marker-alt"></i><span>910 N Doctor M.L.K. Jr Dr, Milwaukee, WI 53203</span></p>
+<p><i class="fas fa-map-marker-alt"></i><span>836–838 N Old World 3rd St, Milwaukee, WI 53203</span></p>
+<p><i class="fas fa-phone"></i><a href="tel:+14142792050">+1 (414) 279-2050</a></p>
+<p><i class="fas fa-envelope"></i><a href="mailto:calatmilwauplumbing@gmail.com">calatmilwauplumbing@gmail.com</a></p>
+<p><i class="fas fa-clock"></i><span>24/7 — Zero Overtime Charges</span></p>
+<p><i class="fas fa-shield-halved"></i><span>Licensed, Bonded &amp; Insured</span></p>
+</address>
+</div>
+</div>
+<div class="copyright">
+<p>&copy; 2025 Calat Milwau Plumbing. All Rights Reserved. Founded 1990. Proudly Serving Milwaukee, WI &amp; Milwaukee County. Licensed Plumbers — 35+ Years of Excellence.</p>
+</div>
+</div>
+</footer>
+<!-- Mobile Call Button -->
+<a href="tel:+14142792050" class="mobile-call-btn">
+<i class="fas fa-phone"></i>
+<span>Call Now: +1 (414) 279-2050</span>
+</a>
+</div>
+<!-- End Wrapper -->
+<script>
+(function() {
+'use strict';
+document.addEventListener('DOMContentLoaded', function() {
+// Popup
+var popup = document.getElementById('pvpPopup');
+var popupClose = document.getElementById('pvpPopupClose');
+if (popup && !sessionStorage.getItem('pvpPopupShown')) {
+setTimeout(function() {
+popup.classList.add('active');
+sessionStorage.setItem('pvpPopupShown', '1');
+}, 5000);
+}
+if (popupClose) {
+popupClose.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+popup.classList.remove('active');
+});
+}
+if (popup) {
+popup.addEventListener('click', function(e) {
+if (e.target === popup) {
+popup.classList.remove('active');
+}
+});
+}
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape' && popup) {
+popup.classList.remove('active');
+}
+});
+// Mobile Navigation
+var toggle = document.getElementById('pvpMobileToggle');
+var menu = document.getElementById('pvpNavMenu');
+if (toggle && menu) {
+toggle.addEventListener('click', function(e) {
+e.preventDefault();
+menu.classList.toggle('active');
+var icon = this.querySelector('i');
+if (icon) {
+if (icon.classList.contains('fa-bars')) {
+icon.classList.remove('fa-bars');
+icon.classList.add('fa-times');
+} else {
+icon.classList.remove('fa-times');
+icon.classList.add('fa-bars');
+}
+}
+});
+}
+// Dropdown
+var dropdownTriggers = document.querySelectorAll('.pvp-page .dropdown-trigger > a');
+dropdownTriggers.forEach(function(link) {
+link.addEventListener('click', function(e) {
+if (window.innerWidth < 992) {
+e.preventDefault();
+var parent = this.parentElement;
+document.querySelectorAll('.pvp-page .dropdown-trigger').forEach(function(item) {
+if (item !== parent) {
+item.classList.remove('active-dropdown');
+}
+});
+parent.classList.toggle('active-dropdown');
+}
+});
+});
+});
+})();
+</script>
